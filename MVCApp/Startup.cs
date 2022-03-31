@@ -5,6 +5,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using MVC.Repo;
+using MVC.Service;
 using MVCApp.Data;
 using System;
 using System.Collections.Generic;
@@ -30,6 +32,11 @@ namespace MVCApp
                Configuration.GetConnectionString("DefaultConnection"))
 
             );
+
+            //Lifetime of the services
+            services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+            services.AddTransient<ICategoryService, CategoryService>();
+
             services.AddControllersWithViews();
         }
 

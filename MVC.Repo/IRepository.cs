@@ -21,6 +21,9 @@ namespace MVC.Repo
         //Deleting the record
         void Delete(T entity);
 
+        //Removing the record
+        void Remove(T entity);
+
         //Saving the record/changes to database
         void SaveChanges();
 

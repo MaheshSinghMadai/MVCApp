@@ -56,6 +56,17 @@ namespace MVC.Repo
             }
 
             entities.Remove(entity);
+            _db.SaveChanges();
+        }
+
+        public void Remove(T entity)
+        {
+            if (entity == null)
+            {
+                throw new ArgumentNullException("entity");
+            }
+
+            entities.Remove(entity);
         }
 
         public void SaveChanges()

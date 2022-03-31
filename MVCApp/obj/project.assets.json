@@ -2435,6 +2435,47 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "MVC.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.4"
+        },
+        "compile": {
+          "bin/placeholder/MVC.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MVC.Data.dll": {}
+        }
+      },
+      "MVC.Repo/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "MVC.Data": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.4"
+        },
+        "compile": {
+          "bin/placeholder/MVC.Repo.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MVC.Repo.dll": {}
+        }
+      },
+      "MVC.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "MVC.Repo": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.4"
+        },
+        "compile": {
+          "bin/placeholder/MVC.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MVC.Service.dll": {}
+        }
       }
     }
   },
@@ -8670,6 +8711,21 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "MVC.Data/1.0.0": {
+      "type": "project",
+      "path": "../MVC.Data/MVC.Data.csproj",
+      "msbuildProject": "../MVC.Data/MVC.Data.csproj"
+    },
+    "MVC.Repo/1.0.0": {
+      "type": "project",
+      "path": "../MVC.Repo/MVC.Repo.csproj",
+      "msbuildProject": "../MVC.Repo/MVC.Repo.csproj"
+    },
+    "MVC.Service/1.0.0": {
+      "type": "project",
+      "path": "../MVC.Service/MVC.Service.csproj",
+      "msbuildProject": "../MVC.Service/MVC.Service.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -8677,6 +8733,8 @@
       "FluentMigrator >= 3.3.2",
       "FluentMigrator.Runner.SqlServer >= 3.3.2",
       "FluentMigrator.Tools >= 3.3.2",
+      "MVC.Repo >= 1.0.0",
+      "MVC.Service >= 1.0.0",
       "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation >= 3.1.12",
       "Microsoft.EntityFrameworkCore >= 5.0.4",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.4",
@@ -8714,7 +8772,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Corion\\source\\repos\\MaheshNBIT\\MVCApp-master\\MVC.Repo\\MVC.Repo.csproj": {
+              "projectPath": "C:\\Users\\Corion\\source\\repos\\MaheshNBIT\\MVCApp-master\\MVC.Repo\\MVC.Repo.csproj"
+            },
+            "C:\\Users\\Corion\\source\\repos\\MaheshNBIT\\MVCApp-master\\MVC.Service\\MVC.Service.csproj": {
+              "projectPath": "C:\\Users\\Corion\\source\\repos\\MaheshNBIT\\MVCApp-master\\MVC.Service\\MVC.Service.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
