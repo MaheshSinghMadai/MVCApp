@@ -20,7 +20,7 @@ namespace MVC.Service
             return _categoryRepository.GetAll();
         }
 
-        public Category GetCategoryById(long id)
+        public Category GetCategoryById(int id)
         {
             return _categoryRepository.GetById(id);
         }
@@ -35,7 +35,7 @@ namespace MVC.Service
             _categoryRepository.Update(category);
         }
 
-        public void DeleteCategory(long id)
+        public void DeleteCategory(int id)
         {
             Category c = new Category();
 
@@ -46,5 +46,7 @@ namespace MVC.Service
             _categoryRepository.Remove(c);
             _categoryRepository.SaveChanges();
         }
+
+       
     }
 }

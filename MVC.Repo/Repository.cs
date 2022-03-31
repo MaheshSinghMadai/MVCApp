@@ -23,7 +23,7 @@ namespace MVC.Repo
             return entities.ToList();
         }
 
-        public T GetById(long id)
+        public T GetById(int id)
         {
             return entities.SingleOrDefault(s => s.Id == id);
         }

@@ -82,3 +82,6 @@ C:\Users\Corion\source\repos\MaheshNBIT\MVCApp-master\MVC.Web\obj\Debug\netcorea
 C:\Users\Corion\source\repos\MaheshNBIT\MVCApp-master\MVC.Web\obj\Debug\netcoreapp3.1\MVC.Web.genruntimeconfig.cache
 C:\Users\Corion\source\repos\MaheshNBIT\MVCApp-master\MVC.Web\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\Corion\source\repos\MaheshNBIT\MVCApp-master\MVC.Web\obj\Debug\netcoreapp3.1\Razor\Views\Category\Index.cshtml.g.cs
+C:\Users\Corion\source\repos\MaheshNBIT\MVCApp-master\MVC.Web\obj\Debug\netcoreapp3.1\Razor\Views\Category\Create.cshtml.g.cs
+C:\Users\Corion\source\repos\MaheshNBIT\MVCApp-master\MVC.Web\obj\Debug\netcoreapp3.1\Razor\Views\Category\Edit.cshtml.g.cs
+C:\Users\Corion\source\repos\MaheshNBIT\MVCApp-master\MVC.Web\obj\Debug\netcoreapp3.1\Razor\Views\Category\Delete.cshtml.g.cs

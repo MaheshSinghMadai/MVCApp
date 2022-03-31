@@ -10,7 +10,7 @@ namespace MVC.Repo
         IEnumerable<T> GetAll();
 
         //Get by particular ID
-        T GetById(long id);
+        T GetById(int id);
 
         //Creating/inserting record into database
         void Insert(T entity);
@@ -18,8 +18,8 @@ namespace MVC.Repo
         //Editing the record
         void Update(T entity);
 
-        //Deleting the record
-        void Delete(T entity);
+        ////Deleting the record
+        //void Delete(T entity);
 
         //Removing the record
         void Remove(T entity);
