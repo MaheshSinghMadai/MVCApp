@@ -7,7 +7,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using MVC.Repo;
 using MVC.Service;
-using MVCApp.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
