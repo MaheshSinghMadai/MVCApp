@@ -9,31 +9,30 @@ namespace MVC.Service
     public class CategoryService : ICategoryService
     {
         //create an instance of the CategoryService
-        private IRepository<Category> categoryRepository;
-
+        private IRepository<Category> _categoryRepository;
         public CategoryService(IRepository<Category> categoryRepository)
         {
-            this.categoryRepository = categoryRepository;
+            _categoryRepository = categoryRepository;
         }
 
         public IEnumerable<Category> GetAllCategories()
         {
-            return categoryRepository.GetAll();
+            return _categoryRepository.GetAll();
         }
 
         public Category GetCategoryById(long id)
         {
-            return categoryRepository.GetById(id);
+            return _categoryRepository.GetById(id);
         }
 
         public void InsertCategory(Category category)
         {
-            categoryRepository.Insert(category);
+            _categoryRepository.Insert(category);
         }
 
         public void UpdateCategory(Category category)
         {
-            categoryRepository.Update(category);
+            _categoryRepository.Update(category);
         }
 
         public void DeleteCategory(long id)
@@ -41,11 +40,11 @@ namespace MVC.Service
             Category c = new Category();
 
             //Get particular category by Id
-            categoryRepository.GetById(id);
+            _categoryRepository.GetById(id);
 
             ///delete and save changes
-            categoryRepository.Remove(c);
-            categoryRepository.SaveChanges();
+            _categoryRepository.Remove(c);
+            _categoryRepository.SaveChanges();
         }
     }
 }

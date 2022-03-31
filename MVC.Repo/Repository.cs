@@ -11,15 +11,16 @@ namespace MVC.Repo
     {
 
         private readonly ApplicationDbContext _db;
-        private DbSet<T> entities;
+        private readonly DbSet<T> entities;
         public Repository(ApplicationDbContext db)
         {
             _db = db;
+            entities = _db.Set<T>();
         }
 
         public IEnumerable<T> GetAll()
         {
-            return entities.AsEnumerable();
+            return entities.ToList();
         }
 
         public T GetById(long id)

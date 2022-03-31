@@ -26,6 +26,5 @@ namespace MVC.Repo
 
         //Saving the record/changes to database
         void SaveChanges();
-
     }
 }
