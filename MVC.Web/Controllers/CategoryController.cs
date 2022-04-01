@@ -113,7 +113,7 @@ namespace MVC.Web.Controllers
 
         //POST-Delete
         [HttpPost]      
-        public IActionResult DeletePost(int id, IFormCollection form)
+        public IActionResult DeletePost(int id)
         {         
             _categoryService.DeleteCategory(id);
 

@@ -39,14 +39,12 @@ namespace MVC.Service
         {
             Category c = new Category();
 
-            //Get particular category by Id
+            ////Get particular category by Id
             _categoryRepository.GetById(id);
 
             ///delete and save changes
             _categoryRepository.Remove(c);
             _categoryRepository.SaveChanges();
         }
-
-       
     }
 }

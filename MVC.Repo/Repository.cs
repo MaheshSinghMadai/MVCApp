@@ -55,7 +55,6 @@ namespace MVC.Repo
             {
                 throw new ArgumentNullException("entity");
             }
-
             entities.Remove(entity);
             _db.SaveChanges();
         }
@@ -66,7 +65,6 @@ namespace MVC.Repo
             {
                 throw new ArgumentNullException("entity");
             }
-
             entities.Remove(entity);
         }
 
