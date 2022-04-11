@@ -24,12 +24,14 @@ namespace MVC.Web.Controllers
         public IActionResult Index()
         {
             List<CategoryViewModel> model = new List<CategoryViewModel>();
+
             _categoryService.GetAllCategories().ToList().ForEach(u =>
             {
-                _categoryService.GetCategoryById(u.Id);
+                _categoryService.GetCategoryById(u.CatId);
+
                 CategoryViewModel cvm = new CategoryViewModel
                 {
-                    Id = u.Id,
+                    Id = u.CatId,
                     Name = u.Name,
                     DisplayOrder = u.DisplayOrder
                 };
@@ -58,7 +60,7 @@ namespace MVC.Web.Controllers
 
             //passing Category obj into the InserUser() function
             _categoryService.InsertCategory(obj);
-            if (obj.Id > 0)
+            if (obj.CatId > 0)
             {
                 return RedirectToAction("Index");
             }

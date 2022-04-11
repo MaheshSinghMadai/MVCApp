@@ -15,7 +15,12 @@ namespace MVC.Repo
         {
             base.OnModelCreating(modelBuilder);
             new CategoryMap(modelBuilder.Entity<Category>());
+            new FoodMap(modelBuilder.Entity<Food>());
 
+            modelBuilder.Entity<Food>()
+            .HasOne<Category>(e => e.Category)
+            .WithMany(d => d.Food)
+            .HasForeignKey(e => e.CatId);
         }
     }
 }

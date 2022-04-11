@@ -25,7 +25,7 @@ namespace MVC.Repo
 
         public T GetById(int id)
         {
-            return entities.SingleOrDefault(s => s.Id == id);
+            return entities.SingleOrDefault(s => s.CatId == id);
         }
 
         public void Insert(T entity)

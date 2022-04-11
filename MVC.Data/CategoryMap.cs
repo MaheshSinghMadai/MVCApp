@@ -9,7 +9,7 @@ namespace MVC.Data
     {
         public CategoryMap(EntityTypeBuilder<Category> entityBuilder)
         {
-            entityBuilder.HasKey(t => t.Id);
+            entityBuilder.HasKey(t => t.CatId);
             entityBuilder.Property(t => t.Name).IsRequired();
             entityBuilder.Property(t => t.DisplayOrder).IsRequired();                 
         }

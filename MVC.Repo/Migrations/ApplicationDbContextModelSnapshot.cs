@@ -20,7 +20,7 @@ namespace MVC.Repo.Migrations
 
             modelBuilder.Entity("MVC.Data.Category", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("CatId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -32,9 +32,39 @@ namespace MVC.Repo.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                    b.HasKey("CatId");
 
                     b.ToTable("Category");
+                });
+
+            modelBuilder.Entity("MVC.Data.Food", b =>
+                {
+                    b.Property<int>("FoodID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("CatId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("FoodName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("FoodID");
+
+                    b.HasIndex("CatId");
+
+                    b.ToTable("Food");
+                });
+
+            modelBuilder.Entity("MVC.Data.Food", b =>
+                {
+                    b.HasOne("MVC.Data.Category", "Category")
+                        .WithMany("Food")
+                        .HasForeignKey("CatId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }
