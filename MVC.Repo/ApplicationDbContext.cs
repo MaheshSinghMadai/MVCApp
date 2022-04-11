@@ -17,6 +17,7 @@ namespace MVC.Repo
             new CategoryMap(modelBuilder.Entity<Category>());
             new FoodMap(modelBuilder.Entity<Food>());
 
+            //defining many to one relationship( 1Category : NFood)
             modelBuilder.Entity<Food>()
             .HasOne<Category>(e => e.Category)
             .WithMany(d => d.Food)
